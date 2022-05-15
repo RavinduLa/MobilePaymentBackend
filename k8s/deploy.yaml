@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mobile-payment-deployment
+  namespace: ravindu-lashan
+  labels:
+    app: mobile-payment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mobile-payment
+  template:
+    metadata:
+      labels:
+        app: mobile-payment
+    spec:
+      containers:
+        - name: mobile-payment
+          image: ravindula/mobile-payment-backend-image:v1
+          ports:
+            - containerPort: 8080
