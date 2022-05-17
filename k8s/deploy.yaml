@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: mobile-payment
-          image: ravindula/mobile-payment-backend-image:v1
+          image: ravindula/mobile-payment-backend-image:{{tag}}
           ports:
             - containerPort: 8080
